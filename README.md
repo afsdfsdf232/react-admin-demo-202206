@@ -68,3 +68,34 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+
+
+
+
+
+
+## 项目搭建
+ npx create-react-app project-name
+
+## 安装sass, 不需要手动配置，react脚手架已经内置了SASS配置， 只需要安装一下
+ npm install sass -D
+ 
+## 安装路由，由于现在V6版本是正式版本，则默认安装就是V6版本
+  npm install react-router-dom
+
+## 安装配置 antd
+  npm install antd
+  
+## 配置 Webpack
+  不建议使用 npm run eject 命令，是不可逆的方式
+  建议使用第三方库，比如 @craco/craco (推荐方式)
+  
+## npm install @craco/craco -D
+  问题，需要执行 npm install react-scripts@4.0.0 将react-scripts版本降级为4.x版本，否则报错；
+  创建 craco.config.js 文件
+  重新配置启动命令 start build test
+  
