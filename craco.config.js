@@ -48,7 +48,6 @@ module.exports = {
 
       if (isFound) {
         // 找到了HtmlWebpackPlugin的插件
-        console.log(' match:', match, cdn)
         match.options.cdn = cdn
       }
 
