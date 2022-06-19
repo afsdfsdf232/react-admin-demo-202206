@@ -1,9 +1,11 @@
 const path = require('path')
 const { whenProd, getPlugin, pluginByName } = require('@craco/craco')
-
+const WebpackBar = require('webpackbar')
+const SimpleProgressWebpackPlugin = require('simple-progress-webpack-plugin')
 module.exports = {
   // webpack 配置
   webpack: {
+    productionSourceMap: false,
     // 配置别名
     alias: {
       // 约定：使用 @ 表示 src 文件所在路径
@@ -52,6 +54,15 @@ module.exports = {
       }
 
       return webpackConfig
-    }
+    },
+    plugins: [
+      // webpack构建进度条
+      new WebpackBar({
+        profile: true
+      }),
+      // 查看打包的进度
+      new SimpleProgressWebpackPlugin()
+    ]
+
   }
 }
